@@ -1,0 +1,64 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="header&footer::Layout(~{::signup})">
+<body>
+	<signup>
+	<div class="container-box">
+		<div class="container">
+			<div class="signup-container">
+				<div class="signup-image"></div>
+				<div class="signup-form">
+					<h2>You're Welcome!</h2>
+					<h5>Please Signup Here</h5>
+
+					<th:block th:if="${msg}">
+						<p class="text-center" th:text="${msg}" style="color: red;"></p>
+					</th:block>
+
+					<!-- Signup Form -->
+					<form action="/saveUser" method="post" id="signupForm"
+						onsubmit="return validateForm()">
+						<input type="text" name="name" placeholder="Full Name" required />
+						<input type="email" name="email" placeholder="Email" required />
+						<input type="text" name="mobileNumber" placeholder="Mobile Number"
+							required /> <input type="text" name="farmerId"
+							placeholder="Farmer ID" required /> <input type="password"
+							id="password" name="password" placeholder="Password" required />
+						<input type="password" id="confirmPassword" name="confirmPassword"
+							placeholder="Confirm Password" required />
+
+						<!-- Error message will be displayed here -->
+						<p id="errorMessage" style="color: red; display: none;"></p>
+
+						<button type="submit" id="submitButton">Sign Up</button>
+					</form>
+
+					<a th:href="@{/login}" class="forgot-password"><span>Already
+							have an account? </span>Login</a>
+					<div class="terms">
+						By signing up, you agree to the <a th:href="@{/Terms_of_Service}">Terms of Service</a>
+						and <a th:href="@{/PrivacyPolicy}">Privacy Policy</a>.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JavaScript --> <script>
+		function validateForm() {
+			var password = document.getElementById("password").value;
+			var confirmPassword = document.getElementById("confirmPassword").value;
+			var errorMessage = document.getElementById("errorMessage");
+
+			if (password !== confirmPassword) {
+				errorMessage.textContent = "Passwords do not match.";
+				errorMessage.style.display = "block";
+				return false; // Prevent form submission
+			}
+			errorMessage.style.display = "none";
+			return true; // Allow form submission
+		}
+	</script> 
+
+</signup>
+</body>
+</html>

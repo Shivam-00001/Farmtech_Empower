@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="header&footer::Layout(~{::calculate})">
+
+<body>
+<calculate>
+  <div class="containee-bg">
+        <div class="containee">
+            <div class="result-container">
+                <h1><span th:text="${cropName}"></span> की खेती से लाभ की गणना</h1>
+
+                <p><span th:text="${cropName}"></span> की खेती से लाभ की गणना करने के लिए दिए गए डेटा के अनुसार, आप निम्नलिखित विवरण के आधार पर कुल लागत, संभावित बिक्री मूल्य और लाभ की गणना कर सकते हैं:</p>
+
+                <h3>कृषि विवरण</h3>
+                <p>फसल का नाम: <span th:text="${cropName}"></span></p>
+
+                <h3>लागत का विवरण (<span th:text="${fieldArea}"></span> हेक्टेयर)</h3>
+                <ul>
+                    <li>भूमि तैयारी: ₹<span th:text="${totalLandPreparationCost}"></span></li>
+                    <li>बीज: ₹<span th:text="${totalSeedCost}"></span></li>
+                    <li>खाद: ₹<span th:text="${totalFertilizerCost}"></span></li>
+                    <li>बुआई: ₹<span th:text="${totalSowingCost}"></span></li>
+                    <li>सिंचाई: ₹<span th:text="${totalIrrigationCost}"></span></li>
+                    <li>कीटनाशक और हर्बिसाइड्स: ₹<span th:text="${totalPesticideCost}"></span></li>
+                    <li>फसल कटाई: ₹<span th:text="${totalHarvestingCost}"></span></li>
+                    <li>पोस्ट-हार्वेस्ट: ₹<span th:text="${totalPostHarvestCost}"></span></li>
+                    <li>अन्य खर्च: ₹<span th:text="${otherExpenses}"></span></li> <!-- Added Other Expenses -->
+                </ul>
+
+                <h3>कुल लागत:</h3>
+                <p>कुल लागत = ₹<span th:text="${totalCost}"></span></p>
+
+                <h3>उत्पादकता और बिक्री मूल्य</h3>
+                <ul>
+                    <li>कुल उत्पादन: <span th:text="${totalProductionKg}"></span> किलोग्राम</li>
+                    <li>बिक्री मूल्य प्रति किलोग्राम: ₹<span th:text="${salePricePerKg}"></span></li>
+                </ul>
+
+                <h3>कुल बिक्री मूल्य:</h3>
+                <p>कुल बिक्री मूल्य = ₹<span th:text="${salePricePerKg}"></span> × <span th:text="${totalProductionKg}"></span> किलोग्राम = ₹<span th:text="${totalSaleValue}"></span></p>
+
+                <h3>लाभ की गणना</h3>
+                <p>लाभ = कुल बिक्री मूल्य − कुल लागत = ₹<span th:text="${totalSaleValue}"></span> − ₹<span th:text="${totalCost}"></span> = ₹<span th:text="${profit}"></span></p>
+
+                <h2>संक्षेप में:</h2>
+                <ul>
+                    <li>कुल लागत: ₹<span th:text="${totalCost}"></span></li>
+                    <li>कुल बिक्री मूल्य: ₹<span th:text="${totalSaleValue}"></span></li>
+                    <li>लाभ: ₹<span th:text="${profit}"></span></li>
+                </ul>
+
+                <p>इस प्रकार, <span th:text="${fieldArea}"></span> हेक्टेयर खेत पर <span th:text="${cropName}"></span> की खेती से संभावित लाभ ₹<span th:text="${profit}"></span> है।</p>
+            </div>
+        </div>
+
+        <!-- Add a back button -->
+        <div class="button-container">
+            <button th:onclick="|window.location.href='@{/calculator}'|" class="back-button"></button>
+        </div>
+    </div>
+
+</calculate>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* Container for the entire page */
+.calculator-container {
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+	height: 61vh; /* Full height of the viewport */
+	padding: 0; /* No padding */
+	background-image: url('/assets/images/cal-bg.jpg');
+	/* Set your background image */
+	background-size: cover; /* Cover the entire area */
+	background-position: center; /* Center the image */
+	overflow: hidden; /* Prevent scrolling */
+}
+
+/* Form container styling */
+.formm-container {
+	display: flex;
+	flex-direction: column; /* Stack elements vertically */
+	background-color: rgba(255, 255, 255, 0.9);
+	/* Slightly transparent white background */
+	padding: 2em;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	max-width: 660px; /* Max width for the form */
+	width: 100%; /* Use 90% width for better responsiveness */
+	margin: 20px; /* Margin for spacing */
+	box-sizing: border-box;
+	/* Include padding and border in width/height */
+}
+
+/* Responsive Design */
+@media ( max-width : 1440px) {
+	.calculator-container {
+		height: 100vh;
+	}
+}
+
+@media ( max-width : 768px) {
+	.formm-container {
+		
+		padding: 1.5em; /* Adjust padding for smaller screens */
+		max-width: 90%; /* Allow more width on smaller screens */
+	}
+	.calculator-container {
+		height: 91vh;
+	}
+}
+
+@media ( max-width : 480px) {
+	.formm-container {
+		padding: 1em; /* Further adjust padding for mobile screens */
+		max-width: 95%; /* Max width for very small screens */
+	}
+	.calculator-container {
+		height: 74vh;
+	}
+}

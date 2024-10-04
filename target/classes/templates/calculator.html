@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="header&footer::Layout(~{::calculator})">
+
+<body>
+    <calculator>
+        <div class="calculator-container">
+            <div class="formm-container">
+                <h1>Agriculture Conversion Calculator</h1>
+                <form id="agricultureForm" th:action="@{/calculate}" method="post" onsubmit="return validateForm();">
+                    <div class="form-group">
+                        <label for="cropSelect">Select Your Crop:</label>
+                        <select id="cropSelect" name="name" required>
+                            <option value="">-- Select Crop --</option>
+                            <option value="Wheat">Wheat</option>
+                            <option value="Corn">Corn</option>
+                            <option value="Paddy">Paddy</option>
+                            <option value="Soybean">Soybean</option>
+                            <option value="Barley">Barley</option>
+                        </select>
+                        <div class="error" id="cropSelectError">Please select a crop.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fieldArea">Enter Your Field Area (in Hectares):</label>
+                        <input type="number" id="fieldArea" name="fieldArea" placeholder="Enter area in hectares" min="0.01" step="0.01" required>
+                        <div class="error" id="fieldAreaError">Please enter a valid field area.</div>
+                    </div>
+                    <button type="submit" class="btn-submit">Calculate</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function validateForm() {
+                let isValid = true;
+                const cropSelect = document.getElementById('cropSelect');
+                const fieldArea = document.getElementById('fieldArea');
+                const cropSelectError = document.getElementById('cropSelectError');
+                const fieldAreaError = document.getElementById('fieldAreaError');
+
+                // Validate crop selection
+                if (cropSelect.value === '') {
+                    cropSelectError.classList.add('show');
+                    isValid = false;
+                } else {
+                    cropSelectError.classList.remove('show');
+                }
+
+                // Validate field area
+                if (fieldArea.value.trim() === '' || fieldArea.value <= 0) {
+                    fieldAreaError.classList.add('show');
+                    isValid = false;
+                } else {
+                    fieldAreaError.classList.remove('show');
+                }
+
+                if (!isValid) {
+                    alert('Please provide the necessary details.');
+                }
+
+                return isValid;
+            }
+        </script>
+    </calculator>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="header&footer::Layout(~{::contact})">
+
+<body>
+    <contact>
+        <div class="contact-image">
+            <div class="contact-banner-img"></div>
+        </div>
+        <section class="contact-section">
+            <div class="contact-form">
+                <form action="/contact" method="post">
+                    <h2>Contact Form</h2>
+                    <!-- Display success or error messages below the header -->
+                    <div th:if="${successMessage}" class="alert alert-success text-center">
+                        <p th:text="${successMessage}"></p>
+                    </div>
+                    <div th:if="${errorMessage}" class="alert alert-danger text-center">
+                        <p th:text="${errorMessage}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="con-image"></div>
+            </div>
+            <div class="map-and-info">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.200778787583!2d80.29184907596!3d26.4492562798529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c47eee60d853f%3A0xa1c7bb8cc563bde8!2sNational%20Skill%20Training%20Institute%2C%20Kanpur!5e0!3m2!1sen!2sin!4v1724402551113!5m2!1sen!2sin"
+                        width="100%" height="350px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-info">
+                    <div class="info-box" data-aos="fade-left">
+                        <img src="/assets/images/pin-gif.gif" alt="Location">
+                        <p>CTI Chouraha, Sanjay Nagar, Kanpur, 208022<br>Uttar Pradesh, India</p>
+                    </div>
+                    <div class="info-box" data-aos="fade-left">
+                        <a href="mailto:example@gmail.com?subject=Hello%20there&body=How%20are%20you%3F"
+                            class="num_email"> <img src="/assets/images/mail-gif.gif" alt="Email"> 
+                        <p style="color: white;">nsti-kanpur@dgt.gov.in</p></a>
+                    </div>
+                    <div class="info-box" data-aos="fade-left">
+                        <a href="tel:+916383814585"
+					class="num_number"><img src="/assets/images/call-gif.gif" alt="Phone">
+                        <p style="color: white;">+91-6383814585</p></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </contact>
+</body>
+
+</html>

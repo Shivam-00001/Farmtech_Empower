@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="Layout(content)">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formtech Empower</title>
+
+<!-- External CSS -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+	integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous" />
+
+<!-- Local CSS -->
+<link rel="stylesheet" th:href="@{/assets/css/header&footer.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/style.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/signup.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/about.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/ourproducts.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/calculator.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/result.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/login.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/contact.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/Privacy_Policy.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/product-details.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/OrderNow.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/profile.css}" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body onload="updateTime()">
+	<header>
+
+		<div class="border">
+			<div class="time">
+				<a><span id="time"></span></a>
+			</div>
+			<div>
+				<i class="fas fa-phone" id="icon"></i> <a href="tel:+916383814585"
+					class="num_number">+6383814585</a> <i class="fas fa-envelope"
+					id="icon"></i> <a
+					href="mailto:example@gmail.com?subject=Hello%20there&body=How%20are%20you%3F"
+					class="num_email">formtechempower@gmail.com</a>
+			</div>
+		</div>
+		<div class="navbar" id="navbar">
+			<div class="logo">
+				<a href="#">FARMTECH <span>EMPOWER</span></a>
+			</div>
+			<ul class="links">
+				<li><a th:href="@{/}">Home</a></li>
+				<li><a th:href="@{/about}">About</a></li>
+				<li><a th:href="@{/contact}">Contact</a></li>
+				<li><a th:href="@{/ourproducts}">Products</a></li>
+
+			</ul>
+			<div class="action-container">
+				<a th:href="@{/signin}" class="login"><abbr title="Login"><img
+						th:src="@{/assets/images/login.png}" alt="Login" /></abbr></a> <a
+					th:href="@{/calculator}" class="login"><abbr
+					title="Agriculture Conversion Calculators"><img
+						th:src="@{/assets/images/calculator.png}" alt="Calculator" /></abbr></a> <a
+					th:href="@{/user/profile}" class="login"><abbr
+					title="Your_Profile"><img
+						th:src="@{/assets/images/profile.png}" alt="profile" /></abbr></a>
+			</div>
+			<div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+		<div class="dropdown_menu">
+			<li><a th:href="@{/}">Home</a></li>
+			<li><a th:href="@{/about}">About</a></li>
+			<li><a th:href="@{/contact}">Contact</a></li>
+			<li><a th:href="@{/ourproducts}">Products</a></li>
+			<li><a th:href="@{/user/profile}">Profile</a></li>
+			<li><a th:href="@{/calculator}"><abbr
+					title="Agriculture Conversion Calculator">Calculator</abbr></a></li>
+			<li><a th:href="@{/signin}">Login</a></li>
+
+		</div>
+	</header>
+
+
+
+
+	<div th:replace="${content}"></div>
+
+
+
+
+
+
+
+	<footer>
+		<div class="footerContainer">
+			<div class="socialIcon">
+				<a href="#"><i class="fa-brands fa-facebook"></i></a> <a href="#"><i
+					class="fa-brands fa-instagram"></i></a> <a href="#"><i
+					class="fa-brands fa-twitter"></i></a> <a href="#"><i
+					class="fa-brands fa-linkedin"></i></a> <a href="#"><i
+					class="fa-brands fa-youtube"></i></a>
+			</div>
+			<div class="footerNab">
+				<ul>
+					<li><span class="fo-style-icon">✧</span><a th:href="@{/}">Home</a></li>
+					<li><span class="fo-style-icon">✧</span><a th:href="@{/about}">About</a></li>
+					<li><span class="fo-style-icon">✧</span><a
+						th:href="@{/contact}">Contact</a></li>
+					<li><span class="fo-style-icon">✧</span><a
+						th:href="@{/ourproducts}">Products</a></li>
+					<li><span class="fo-style-icon">✧</span><a
+						th:href="@{/signin}">Login</a></li>
+					<li><span class="fo-style-icon">✧</span><a
+						th:href="@{/calculator}">Calculator</a></li>
+					<li><span class="fo-style-icon">✧</span><a
+						th:href="@{/user/profile}">Profile</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footerBottom">
+			<p>
+				&copy;
+				<script>
+					document.write(new Date().getFullYear())
+				</script>
+				FARMTECH EMPOWER. All Rights Reserved. Designed by <a href="#"
+					class="designer">MYSTERIOUS CODE WARRIORS</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- JavaScript -->
+	<script th:src="@{/assets/js/javaScript.js}"></script>
+	<script th:src="@{/assets/js/about.js}"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script th:src="@{/assets/js/login.js}" defer type="module"></script>
+	<script th:src="@{/assets/js/signup.js}"></script>
+	<script> th:src="{/assets/js/product-details.js}"</script>
+	<script>
+		AOS.init({
+			offset : 300,
+			duration : 1000,
+		});
+	</script>
+	<script>
+		// JavaScript function to update the time every second in 12-hour format with AM/PM
+		function updateTime() {
+			const now = new Date();
+			let hours = now.getHours();
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			const ampm = hours >= 12 ? 'PM' : 'AM';
+
+			// Convert 24-hour format to 12-hour format
+			hours = hours % 12;
+			hours = hours ? hours : 12; // If hours is 0, set it to 12 (midnight or noon)
+
+			const currentTime = `${hours}:${minutes}:${seconds} ${ampm}`;
+			document.getElementById('time').innerText = currentTime;
+		}
+
+		// Set the clock to update every second
+		setInterval(updateTime, 1000);
+	</script>
+</body>
+</html>

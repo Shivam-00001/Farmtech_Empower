@@ -1,0 +1,155 @@
+.calculate {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.containee-bg {
+    font-family: 'Arial', sans-serif;
+    background: url('../images/calculator-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0.9;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Make sure other images scale well */
+img {
+    max-width: 100%; /* Ensures the image scales to the width of its container */
+    height: auto;    /* Maintains aspect ratio */
+}
+
+/* Styling for the containee block */
+.containee {
+    max-width: 900px;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button CSS */
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.back-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/back-arrow.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(1) grayscale(0);
+}
+
+
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+    .containee-bg {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .containee {
+        width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input, .form-group select {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .btn-submit {
+        font-size: 16px;
+        padding: 10px 15px;
+        width: 100%;
+    }
+}
+
+/* For tablets */
+@media only screen and (max-width: 768px) {
+    .containee-bg {
+        justify-content: center;
+    }
+
+    .containee {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .form-group input, .form-group select {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .btn-submit {
+        font-size: 18px;
+        padding: 12px 20px;
+        width: 100%;
+    }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 769px) {
+    .containee-bg {
+        justify-content: flex-end;
+    }
+
+    .containee {
+        width: 80%;
+        max-width: 900px;
+        margin: 30px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .form-group label {
+        font-size: 18px;
+    }
+
+    .form-group input, .form-group select {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .btn-submit {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}

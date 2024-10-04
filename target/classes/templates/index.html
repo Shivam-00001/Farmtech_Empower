@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="header&footer::Layout(~{::home})">
+    
+    
+<home>
+ <link rel="stylesheet" th:href="@{/style.css}"/>
+<body>
+    
+        <div id="header"></div>
+        <div class="space"></div>
+        <div class="imagess">
+            <div class="imgs"></div>
+        </div>
+        <div class="about-us" >
+            <span class="line" ></span>
+            About Us
+            <span class="line"></span>
+        </div>
+        <div class="container" style="height: 500px;
+    max-width: 1500px">
+            <div class="content" >
+                <div class="text">
+                    <h1>Grow More With <br>Harvest The Future</h1>
+                    <h3>Empower Your Farming Future with Innovative Solutions</h3>
+                    <p class="center-text">
+                        At FARMTECH EMPOWER, we believe in cultivating a sustainable future for agriculture. Our mission
+                        is
+                        to empower farmers with knowledge and advanced technologies that enhance productivity while
+                        preserving natural resources. With a focus on organic and eco-friendly farming practices, we
+                        encourage farmers to grow more with Harvest the Future. Join us as we pave the way towards a
+                        resilient and prosperous farming community, leveraging GP-Biotec's cutting-edge plant varieties
+                        and
+                        innovative solutions.
+                    </p>
+                    <button class="redirect-button" > <a th:href="@{/about}">Learn More..</a></button>
+                </div>
+                <div class="image">
+                    <img src="/assets/images/ab1.jpg" alt="Image Description">
+                </div>
+            </div>
+        </div>
+
+        <div class="homep" data-aos="fade-up">
+            <div class="img"></div>
+        </div>
+        <div class="box-headline-container" data-aos="fade-up">
+            <h2 class="box-headline">Why Join with Farmtech Empower?</h2>
+            <span class="box_line"></span>
+        </div>
+
+        <div class="box-container" data-aos="zoom-out">
+            <!-- <div class="boxHead_line">Why Join with Formtech Empower  ?</div> -->
+            <div class="box">
+                <img src="/assets/images/pin.png" alt="Image 1">
+                <div class="description"><a href="">Wide Distribution Network</a></div>
+            </div>
+            <div class="box">
+                <img src="/assets/images/price.png" alt="Image 2">
+                <div class="description"><a href="">Affordable Prices</a> </div>
+            </div>
+            <div class="box">
+                <img src="/assets/images/quality.png" alt="Image 3">
+                <div class="description"><a href="">World-Class Quality</a> </div>
+            </div>
+            <div class="box">
+                <img src="/assets/images/trusted.png" alt="Image 4">
+                <div class="description"><a href="">Reliable & Trusted Services</a></div>
+            </div>
+            <div class="box">
+                <a href="tel:+916383814585"><img src="/assets/images/support.png" alt="Image 5"></a>
+                <div class="description"><a href="tel:+916383814585">Customer Support</a></div>
+            </div>
+            <div class="box">
+                <img src="/assets/images/van.png" alt="Image 6">
+                <div class="description"><a href="">Strong Logistics Support</a> </div>
+            </div>
+            <div class="box">
+                <img src="/assets/images/tech.png" alt="Image 7">
+                <div class="description"><a href=""> Modern Technology</a></div>
+            </div>
+            <div class="box">
+                <img src="/assets/images/timely.png" alt="Image 8">
+                <div class="description"><a href="">Timely Delivery</a></div>
+            </div>
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width slides/quotes -->
+            <div class="mySlides">
+                <img src="/assets/images/p1.jpg" alt="">
+                <h5>Mr.Akash Gupta</h5>
+                <q>"As a long-time user of FARMTECH EMPOWER's organic farming techniques, I've seen a significant
+                    improvement in my crop yield. Their methods not only boost productivity but also promote
+                    sustainability,
+                    which is crucial for the health of our environment. I wholeheartedly trust FARMTECH EMPOWER to
+                    support
+                    my farming needs." </q>
+                <p class="author">,,</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="/assets/images/p3.jpg" alt="">
+                <h5>Mr.Sachin Singh</h5>
+                <q>"FARMTECH EMPOWER has been a game-changer for my farm. Their innovative approaches and dedicated
+                    support
+                    have helped me overcome numerous challenges. With their guidance, I have achieved remarkable
+                    results,
+                    and I'm incredibly grateful for their ongoing partnership."</q>
+                <p class="author">,,</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="/assets/images/p5.jpg" alt="">
+                <h5>Mr.Kartik Verma</h5>
+                <q>"Since adopting FARMTECH EMPOWER's natural farming methods, my farm's productivity has soared. Their
+                    expert advice and superior plant varieties have made a world of difference. FARMTECH EMPOWER isn't
+                    just
+                    a service provider; they are a trusted partner in my agricultural success."</q>
+                <p class="author">,,</p>
+            </div>
+
+            <!-- Next/prev buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+        </script>
+
+</body>
+  </home>
+</html>

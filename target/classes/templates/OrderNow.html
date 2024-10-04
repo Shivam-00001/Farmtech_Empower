@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="header&footer::Layout(~{::OrderNow})">
+
+<body>
+<OrderNow>
+<div class="message-placeholder">
+    <!-- Replace this with Thymeleaf message content -->
+    <span th:text="${message}"></span>
+</div>
+
+<div class="form-container">
+    <h1>Add Delivery Address</h1>
+    <form id="deliveryForm" action="/submitOrder" method="post">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+            <div class="error" id="fullNameError">Please provide your full name.</div>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number">
+            <div class="error" id="phoneNumberError">Please provide your phone number.</div>
+        </div>
+        <div class="form-group">
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode">
+            <div class="error" id="pincodeError">Please provide your pincode.</div>
+        </div>
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter your state">
+            <div class="error" id="stateError">Please provide your state.</div>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city">
+            <div class="error" id="cityError">Please provide your city.</div>
+        </div>
+        <div class="form-group">
+            <label for="houseNo">House No / Building Name:</label>
+            <input type="text" id="houseNo" name="houseNo" placeholder="Enter house number or building name">
+            <div class="error" id="houseNoError">Please provide your house number or building name.</div>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1">
+            <div class="error" id="quantityError">Please provide the quantity.</div>
+        </div>
+        <div class="form-group">
+            <label for="productNo">Product No:</label>
+            <input type="text" id="productNo" name="productNo" placeholder="Enter Product No">
+            <div class="error" id="productNoError">Please provide the Product No.</div>
+        </div>
+        <button type="submit" class="btn-submit">Order Now</button>
+    </form>
+</div>
+<div class="button-container"></div>
+<button th:onclick="|window.location.href='@{/product-details}'|" class="back-button"></button>
+</div>
+</OrderNow>
+</body>
+</html>

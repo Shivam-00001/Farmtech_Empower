@@ -1,0 +1,86 @@
+/* Specific styles for the profile page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.profile-wrapper {
+    display: flex;
+    justify-content: center; /* Center the profile container */
+    margin-bottom: 99px;
+}
+
+.profile-container {
+    width: 100%;
+
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left inside the profile container */
+    margin-top: 20px; /* Margin for top */
+    margin-bottom: 20px; /* Margin for bottom */
+}
+
+.profile-title {
+    margin: 0;
+    font-size: 40px;
+    color: #1d5c04e8;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    font-weight: bold; /* Make title bold */
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 20px 0; /* Margin for top and bottom of individual paragraphs */
+}
+
+.profile-info span {
+    font-weight: bold;
+}
+
+.button {
+    text-align: right; /* Align the button to the right */
+    margin-top: 20px; /* Margin for top of the button */
+}
+
+.profile-logout {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #28a745;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.profile-logout{
+    background: red;
+}
+
+.profile-logout:hover {
+    background: #218838; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+    }
+    .profile-title {
+        font-size: 30px;
+    }
+    .profile-info p {
+        font-size: 14px;
+    }
+    .profile-wrapper {
+        margin-bottom: 0px;
+    }
+}

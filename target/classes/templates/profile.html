@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="header&footer::Layout(~{::profile})">
+<body>
+<profile>
+    <h1 style="margin-top:5px; background-color:green; padding-top:10px; padding-bottom:10px; color:#fff; font-weight:bold;">
+        Welcome to Farmtech Empower
+    </h1>
+    <div class="profile-wrapper">
+        <div class="profile-container">
+            <h2 class="profile-title">Your Profile</h2>
+            <div class="profile-info">
+                <p>Hello Mr.👉 <span th:text="${user.name}"></span></p>
+                <p>Email: <span th:text="${user.email}"></span></p>
+                <p>Mobile No: <span th:text="${user.mobileNumber}"></span></p>
+                <p>Farmer ID: <span th:text="${user.farmerId}"></span></p>
+            </div>
+            <div class="button">
+                <a href="/logout" class="profile-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</profile>
+</body>
+</html>

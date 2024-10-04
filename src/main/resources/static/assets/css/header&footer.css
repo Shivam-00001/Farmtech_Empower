@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.border {
+     background-color: green;
+    text-align: right;
+    padding-right: 30px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: space-around;
+}
+
+#time{
+	    color: white;
+    font-size: larger;
+}
+#time:hover{
+	color:orange;
+}
+
+#icon {
+    color: green;
+    border: 1px solid white;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+ a {
+    text-decoration: none;
+    color: #020202;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+ a:hover {
+    color: orange;
+}
+
+header {
+    padding: 0.2rem;
+    background-color: #fff;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .logo span {
+    color: orange;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 20px;
+    list-style: none; /* Removed the bullets from the list */
+}
+
+.navbar .links li a {
+    font-weight: bolder; /* Made the links bolder */
+    font-size: 1.2rem; /* Increased the font size */
+}
+
+.navbar .toggle_btn {
+    color: #020202;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    
+}
+
+.login img {
+    height: 40px;
+    width: 40px;
+    display: block;
+}
+
+.login:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(26, 23, 23, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 290px;
+    z-index: 11;
+}
+
+.dropdown_menu li {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action-container {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+footer {
+    background-image: url('/assets/images/bg-w.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.footerContainer {
+    text-align: center;
+}
+
+.socialIcon  {
+    background: aliceblue;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.socialIcon a {
+    margin: 20px;
+    font-size: 1.5em;
+    color: #000;
+    opacity: 0.9;
+    transition: .5s ease-in-out;
+}
+
+.socialIcon a:hover {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.socialIcon a:nth-child(1):hover {
+    color: #4267B2; /* Facebook blue */
+}
+
+.socialIcon a:nth-child(2):hover {
+    color: #C13584; /* Instagram gradient color (pinkish) */
+}
+
+.socialIcon a:nth-child(3):hover {
+    color: #1DA1F2; /* Twitter blue */
+}
+
+.socialIcon a:nth-child(4):hover {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.socialIcon a:nth-child(5):hover {
+    color: #FF0000; /* YouTube red */
+}
+
+
+
+.footerNab ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 7px;
+    column-gap: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.footerNab ul li a {
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNab ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: rgb(16, 83, 16);
+    text-align: center;
+    padding: 10px;
+width: 100%;
+}
+
+.footerBottom p {
+    color: #fff;
+    margin: 0;
+}
+
+.designer {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.designer:hover {
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .footerNab ul {
+        flex-direction: column;
+        margin-right: 15%;
+        text-align-last: left;
+    }
+
+    .footerNab ul li {
+        width: 100%;
+        text-align: center;
+        margin: 6px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

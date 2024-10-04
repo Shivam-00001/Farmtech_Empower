@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+ th:replace="header&footer::Layout(~{::product-details})">
+<body>
+    <product-details>
+    <div class="product-page">
+        <div class="product-details">
+            <div class="product-image">
+                <img src="/assets/images/product-featured-31.png" alt="Booster PGR">
+            </div>
+            <div class="product-info">
+                <h1>Booster PGR (310590)</h1>
+                <p>Booster PGR (310590) is a cutting-edge plant growth regulator designed to optimize plant growth and development for improved yield and quality. This advanced formula provides targeted regulation of key physiological processes, enhancing plant performance and maximizing crop productivity.</p>
+                <p><strong>Size:</strong> 500ml</p>
+                <p><strong>Price:</strong> Rs 1449</p>
+                <p><strong>Availability:</strong> In Stock</p>
+              
+
+                <button class="add-to-cart"><a th:href="@{/OrderNow}">Order Now</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-r">
+        <h2>Related Products</h2>
+        <p>See all the related products from below</p>
+        <div class="carousel">
+            <div class="card">
+                <img src="/assets/images/product-featured-31.png" alt="Jupiter Gold">
+                <p>Jupiter Gold (380899)</p>
+                <p>Rs 1180</p>
+                <a th:href="@{/product-details}">Check Now</a>
+            </div>
+            <div class="card">
+                <img src="/assets/images/product-featured-33.png" alt="Jupiter Gold">
+                <p>Booster PGR (310590)</p>
+                <p>Rs 56446546</p>
+               <a th:href="@{/product-details}">Check Now</a>
+
+            </div>
+            <div class="card">
+                <img src="/assets/images/product-featured-32.png" alt="Booster PGR">
+                <p>Booster PGR (310590)</p>
+                <p>Rs 899</p>
+              <a th:href="@{/product-details}">Check Now</a>
+
+            </div>
+            <div class="card">
+                <img src="/assets/images/product-featured-29.png" alt="Booster PGR">
+                <p>Booster PGR (310590)</p>
+                <p>Rs 899</p>
+               <a th:href="@{/product-details}">Check Now</a>
+
+            </div>
+            <div class="card">
+                <img src="/assets/images/product-featured-37.png" alt="Booster PGR">
+                <p>Booster PGR (310590)</p>
+                <p>Rs 899</p>
+               <a th:href="@{/product-details}">Check Now</a>
+
+            </div>
+            <div class="card">
+                <img src="/assets/images/product-featured-34.png" alt="Booster PGR">
+                <p>Booster PGR (310590)</p>
+                <p>Rs 899</p>
+              <a th:href="@{/product-details}">Check Now</a>
+
+            </div>
+            <div class="card">
+                <img src="/assets/images/product-featured-32.png" alt="Booster PGR">
+                <p>Booster PGR (310590)</p>
+                <p>Rs 899</p>
+               <a th:href="@{/product-details}">Check Now</a>
+
+            </div>
+           
+        </div>
+    </div>
+
+</product-details>
+</body>
+</html>
