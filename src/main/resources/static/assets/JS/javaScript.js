@@ -33,7 +33,3 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-// Auto slide functionality
-setInterval(function() {
-  plusSlides(1);
-}, 3000);

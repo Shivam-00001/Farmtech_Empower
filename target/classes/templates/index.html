@@ -138,9 +138,12 @@
             duration: 1000,
         });
 
+// Auto slide functionality
+setInterval(function() {
+  plusSlides(1);
+}, 3000); // Change slide every 3 seconds
 
 
-        
 const toggleBtn = document.querySelector('.toggle_btn');
 const dropdownMenu = document.querySelector('.dropdown_menu');
 
@@ -176,10 +179,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-// Auto slide functionality
-setInterval(function() {
-  plusSlides(1);
-}, 3000); // Change slide every 3 seconds
 
         </script>
 
